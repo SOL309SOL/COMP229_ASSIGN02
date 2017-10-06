@@ -4,13 +4,12 @@
      <style>
         .survey{
              background-color:rgba(33,21,0,0.7);
-             width:95%;
-             margin: 130px auto 0px auto;
+             width:100%;
+             margin: 0px auto 0px auto;
              height:100%;
-             border-radius:20px;
-             box-shadow:2px 2px 2px #541E1C;
-             padding:10px;
              color:white;
+             padding: 100px;
+   
         }
        .home_logo{
            margin-left:45%;
@@ -29,14 +28,11 @@
                 <asp:TableCell><asp:Label ID="Label2" runat="server" Text="1.Please give your email address"></asp:Label></asp:TableCell>
             </asp:TableRow> 
             <asp:TableRow> 
-                    <asp:TableCell><asp:TextBox ID="TextBox1" runat="server" CausesValidation="False"></asp:TextBox></asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow>
-                <asp:TableCell>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter proper data" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="TextBox1"></asp:RegularExpressionValidator>
+                    <asp:TableCell><asp:TextBox ID="TextBox1" runat="server" CausesValidation="False"></asp:TextBox>
+           
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter proper data" ControlToValidate="TextBox1" BackColor="#FF5050"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="TextBox1" BackColor="#FF5050"></asp:RegularExpressionValidator></asp:TableCell>
 
-                </asp:TableCell>
             </asp:TableRow> 
 
 
@@ -49,11 +45,10 @@
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:TextBox ID="TextBox2" runat="server" placeholder="50"></asp:TextBox>
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow>
-                <asp:TableCell>
-                    <asp:RangeValidator ID="RangeValidator1" runat="server" ForeColor="Red" ErrorMessage="Out of Range" ControlToValidate="TextBox2" MinimumValue="20" MaximumValue="70" ></asp:RangeValidator>
+               
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter proper data" ControlToValidate="TextBox1" BackColor="#FF5050"></asp:RequiredFieldValidator>
+
+                    <asp:RangeValidator ID="RangeValidator1" runat="server" ForeColor="White" ErrorMessage="Out of Range" ControlToValidate="TextBox2" MinimumValue="20" MaximumValue="70" BackColor="#FF5050"></asp:RangeValidator>
                 </asp:TableCell>
             </asp:TableRow>
  
@@ -141,7 +136,7 @@
         </asp:Table>
         </div>
         </div>
-    <div class="home_logo">
+<%--    <div class="home_logo">
             <p><asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/img/home_logo.png" Width="100px" PostBackUrl="~/Default.aspx" /></p>
-    </div>
+    </div>--%>
 </asp:Content>

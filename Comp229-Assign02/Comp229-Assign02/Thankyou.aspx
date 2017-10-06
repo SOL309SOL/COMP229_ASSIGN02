@@ -15,5 +15,8 @@
    </style>
     <div class="bg">
  <h2><%: Title %>.</h2>
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label> 
+    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+    <p></p>
     </div>
 </asp:Content>
