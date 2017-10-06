@@ -4,7 +4,8 @@
 
     <div class="bg">
  <h1><%: Title %>.</h1>
-        <asp:Label ID="Label1" runat="server" Text=""></asp:Label> 
+        
+    <asp:Label ID="Label1" runat="server" Text=""></asp:Label> 
     <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
     <p></p>
     </div>
