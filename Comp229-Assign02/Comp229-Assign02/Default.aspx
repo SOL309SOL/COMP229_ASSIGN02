@@ -1,30 +1,8 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Comp229_Assign02._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <style>
-        .bg{
-            background-color:rgba(33,21,0,0.7);
-            width:100%;
-            height:100%;
-            margin: 0px auto 0px auto;
 
-        }
-        .privacy{
-            font-size:0.7em;
-            padding-right:20px;
-        }
-        .jumbo_footer{
-            margin-top:30px;
-        }
-        .smallFont{
-            font-size:0.7em;
-        }
-        h1{
-            font-family:'Comic Sans MS';
-            margin-bottom:20px;
-        }
-    </style>
-    <div class="bg">
+    <div class="def_bg">
     <div class="jumbotron">
      <br /><br />
         <asp:ImageButton ID="logo" runat="server" ImageUrl="~/img/logo1.png" Width="50px" />
@@ -37,11 +15,14 @@
 
         <div class="jumbo_footer">
 
-        <p><asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/img/home_logo.png" Width="30px" /></p>
-        <p class="privacy"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://privacy.microsoft.com/en-us/privacystatement">Privacy statement</asp:HyperLink> |
-   <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="https://support.microsoft.com/en-us/help/11532/windows-disclaimers">Disclaimers</asp:HyperLink></p>
+        <p class="privacy"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://privacy.microsoft.com/en-us/privacystatement" ForeColor="Wheat">Privacy statement</asp:HyperLink> |
+   <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="https://support.microsoft.com/en-us/help/11532/windows-disclaimers" ForeColor="Wheat">Disclaimers</asp:HyperLink></p>
     </div>
         </div>
     </div>
 
+
+        <%--References :
+        background image: https://www.google.ca/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwj_hrrczdvWAhWCy4MKHR1nDZwQjRwIBw&url=http%3A%2F%2Fwww.wallpapersin4k.org%2Fimages%2F958659&psig=AOvVaw31aaU-f5REO7Bwiu3_6Q8g&ust=1507365887510068
+        logo image: https://www.google.ca/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwig57rpodvWAhUK5IMKHdMyDSIQjRwIBw&url=https%3A%2F%2Fwww.kent.edu%2Fsole&psig=AOvVaw3rUrifNo3BCdLumACClaGP&ust=1507354116626039--%>
 </asp:Content>

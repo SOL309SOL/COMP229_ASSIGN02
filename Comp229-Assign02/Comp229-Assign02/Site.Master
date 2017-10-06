@@ -13,7 +13,7 @@
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/favicon.png" rel="shortcut icon" type="image/x-icon" />
 
 </head>
 <body>
@@ -48,11 +48,12 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" runat="server" href="~/" dir="rtl">
-                        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/sole_logo.jpg" Width="80px" /></a>
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/sole_logo.jpg" Width="80px"  /></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
+
                         <li><a runat="server" href="~/Survey">Survey</a></li>
                         <li><a runat="server" href="~/Thankyou">Thankyou</a></li>
                     </ul>
