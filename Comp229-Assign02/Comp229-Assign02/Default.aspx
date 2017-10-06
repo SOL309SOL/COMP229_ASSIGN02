@@ -4,10 +4,9 @@
     <style>
         .bg{
             background-color:rgba(33,21,0,0.7);
-            width:99%;
-            height:99%;
-            border-radius:20px;
-            margin: 5px auto 0px auto;
+            width:100%;
+            height:100%;
+            margin: 0px auto 0px auto;
 
         }
         .privacy{
@@ -15,7 +14,7 @@
             padding-right:20px;
         }
         .jumbo_footer{
-            margin-top:80px;
+            margin-top:30px;
         }
         .smallFont{
             font-size:0.7em;
@@ -27,13 +26,13 @@
     </style>
     <div class="bg">
     <div class="jumbotron">
-     
+     <br /><br />
         <asp:ImageButton ID="logo" runat="server" ImageUrl="~/img/logo1.png" Width="50px" />
-        <p class="smallFont">Sole restaurnat</p><br />
+        <p class="smallFont">Sole restaurnat</p>
    <h1>Take your chance!</h1>
     <p class="smallFont">Welcome our company!<br />Take your 5 minutes and get your $1,000,000,000 with this survey. <br />
         We will inform winner after Oct 30th<br /></p>
-                            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Survey.aspx" CssClass="btn btn-default">Take a Survey</asp:LinkButton><br />
+                            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Survey.aspx" CssClass="btn btn-default">Take a Survey</asp:LinkButton>
 
 
         <div class="jumbo_footer">

@@ -129,6 +129,7 @@
     <Content Include="img\bg1.jpg" />
     <Content Include="img\home_logo.png" />
     <Content Include="img\logo1.png" />
+    <Content Include="img\sole_logo.jpg" />
     <Content Include="Thankyou.aspx" />
     <Content Include="Survey.aspx" />
     <Content Include="Content\bootstrap.css" />

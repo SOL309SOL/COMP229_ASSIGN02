@@ -401,8 +401,8 @@ img {
 }
 
 hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     border: 0;
     border-top: 1px solid #eeeeee;
 }
@@ -784,6 +784,7 @@ pre {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    margin-top:20px;
 }
 
     .container:before,
@@ -4364,6 +4365,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-fixed-top {
     top: 0;
     z-index: 1030;
+    background-color:white;
+    height:100px;
+    vertical-align:central;
 }
 
 .navbar-fixed-bottom {

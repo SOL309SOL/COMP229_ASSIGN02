@@ -1,7 +1,7 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     background-image: url("https://s-media-cache-ak0.pinimg.com/originals/ea/56/51/ea56517c33ff78b5e922408dc1c8e7a7.jpg");
 }
 

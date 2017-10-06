@@ -47,7 +47,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/" dir="rtl">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/sole_logo.jpg" Width="80px" /></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -61,12 +62,15 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
-        </div>
 
+        </div>
+        <div style="min-height: 100px;background-color: white;">
+             <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+   
+  </div>
+   <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+  </div>
     </form>
 </body>
 </html>

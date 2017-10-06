@@ -3,14 +3,14 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
      <style>
         .survey{
-             background-color:rgba(255,255,255,1);
-             width:70%;
-             margin: 0px auto 0px auto;
+             background-color:rgba(33,21,0,0.7);
+             width:95%;
+             margin: 130px auto 0px auto;
              height:100%;
              border-radius:20px;
-             border:double;
              box-shadow:2px 2px 2px #541E1C;
              padding:10px;
+             color:white;
         }
        .home_logo{
            margin-left:45%;
@@ -64,7 +64,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                   <asp:RadioButtonList ID="RadioButtonList3" runat="server">
+                   <asp:RadioButtonList ID="RadioButtonList3" runat="server" RepeatDirection="Horizontal">
                         <asp:ListItem Text="Male" Value="value" Selected="True" />
                         <asp:ListItem Text="Female" Value="value" Selected="False" />
                         <asp:ListItem Text="I don't want to say" Value="value" Selected="False" />
@@ -90,7 +90,7 @@
             </asp:TableRow> 
              <asp:TableRow>
                 <asp:TableCell>
-                   <asp:RadioButtonList ID="RadioButtonList2" runat="server">
+                   <asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatDirection="Horizontal">
                         <asp:ListItem Text="First Visit" Value="value" Selected="True" />
                         <asp:ListItem Text="Once or Twice" Value="value" Selected="True" />
                         <asp:ListItem Text="More Than Four Times" Value="value" Selected="True" />
