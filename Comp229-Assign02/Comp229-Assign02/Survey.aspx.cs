@@ -14,18 +14,28 @@ namespace Comp229_Assign02
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ConfigurationManager.AppSettings.Add("surveyEmail", txtBox1.Text);
-            //Configuration config = WebConfigurationManager.OpenWebConfiguration("/");
-            //string oldValue = config.AppSettings.Settings["thankyouMessage"].Value;
-            //config.AppSettings.Settings["thankyouMessage"].Value = txtBox1.Text;
-            //config.Save(ConfigurationSaveMode.Modified);
-
-
+          
             Configuration config = WebConfigurationManager.OpenWebConfiguration("~");
-            config.AppSettings.Settings.Add("thankyouMessage", txtBox1.Text);
-            config.Save();
+            
+            config.AppSettings.Settings.Add("thankyouMessage", "Email: "+TextBox1.Text+"<br/>");
+            config.AppSettings.Settings.Add("thankyouMessage", "Price: " + TextBox2.Text + "<br/>");
+            //config.AppSettings.Settings.Add("thankyouMessage", "Gender: " + RadioButtonList3.Text + "<br/>");
+            //config.AppSettings.Settings.Add("thankyouMessage", "Age: " + DropDownList2.SelectedValue + "<br/>");
+            //config.AppSettings.Settings.Add("thankyouMessage", "Visit Time: " + RadioButtonList2.Text + "<br/>");
+            //config.AppSettings.Settings.Add("thankyouMessage", "Rate: " + RadioButtonList4.Text + "<br/>");
+            config.AppSettings.Settings.Add("thankyouMessage", "Comment: " + TextBox3.Text + "<br/>");
 
-            //TextBox1.Text = Application("thankyouMessage").ToString()
+            config.Save();
+            
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            
+
+            Response.Redirect("thankyou.aspx");
+            
+          
 
         }
     }

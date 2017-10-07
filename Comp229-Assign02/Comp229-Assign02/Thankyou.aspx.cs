@@ -11,10 +11,11 @@ namespace Comp229_Assign02
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+          
             string value = System.Configuration.ConfigurationManager.AppSettings["thankyouMessage"];
             Label1.Text = value;
-            string value1 = System.Configuration.ConfigurationManager.AppSettings["surveyEmail"];
-            Label2.Text = value;
+
+
         }
     }
 }
