@@ -2012,9 +2012,3 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   })
 
 }(window.jQuery);
-
-
-document.getElementById("Button1").addEventListener("click", function (e) { submitClickEvent(e) }, false);
-function submitClickEvent(e) {
-    document.getElementsByTagName("form")[0].submit();
-}

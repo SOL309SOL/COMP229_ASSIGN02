@@ -784,7 +784,9 @@ pre {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    margin-top:20px;
+    margin-top: 20px;
+    margin-bottom:0px;
+
 }
 
     .container:before,
@@ -1362,7 +1364,8 @@ pre {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1170px;
+        max-width: 100%;
+
     }
 
     .col-lg-1,
@@ -4365,9 +4368,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-fixed-top {
     top: 0;
     z-index: 1030;
-    background-color:white;
-    height:100px;
-    vertical-align:central;
+    background-color: white;
+    height: 100px;
+    vertical-align: central;
 }
 
 .navbar-fixed-bottom {
@@ -4380,7 +4383,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     padding: 15px 15px;
     font-size: 18px;
     line-height: 20px;
-    margin-top:-10px;
+    margin-top: -10px;
 }
 
     .navbar-brand:hover,
@@ -4456,7 +4459,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
             .navbar-nav .open .dropdown-menu > li > a:hover,
             .navbar-nav .open .dropdown-menu > li > a:focus {
                 background-image: none;
-                
             }
 }
 
@@ -4723,7 +4725,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
         .navbar-inverse .navbar-nav > li > a:focus {
             color: #ffffff;
             background-color: wheat;
-            border-radius:10px;
+            border-radius: 10px;
         }
 
     .navbar-inverse .navbar-nav > .active > a,
@@ -5130,14 +5132,12 @@ a.list-group-item.active > .badge,
 
 .jumbotron {
     padding: 30px;
-    margin-bottom: 30px;
     font-size: 21px;
     font-weight: 200;
-    line-height: 2.1428571435;
     color: white;
     background-color: rgba(0,0,0,0);
     text-align: center;
-    height: 600px;
+    height: 85vh;
     width: 70%;
     margin-left: 15%;
 }
@@ -7123,6 +7123,9 @@ td.visible-print {
     box-shadow: 2px 2px 2px #541E1C;
     padding: 10px;
     color: white;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Comic Sans MS';
 }
 
 .def_bg {
@@ -7148,5 +7151,5 @@ td.visible-print {
 h1 {
     font-family: 'Comic Sans MS';
     margin-bottom: 20px;
-    text-align:center;
+    text-align: center;
 }

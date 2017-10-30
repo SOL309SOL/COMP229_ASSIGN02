@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Survey" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Survey.aspx.cs" Inherits="Comp229_Assign02.Contact" %>
+﻿<%@ Page Title="Survey" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Survey.aspx.cs" Inherits="Comp229_Assign02.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -55,11 +55,10 @@
                 <asp:TableRow>
                     <asp:TableCell>
                         <asp:DropDownList ID="DropDownList2" runat="server" ValidationGroup="Curriculum">
-                            <asp:ListItem Value="value" Selected="false">Select...</asp:ListItem>
-                            <asp:ListItem Value="value" Selected="false">10 to 20</asp:ListItem>
-                            <asp:ListItem Value="value" Selected="false">20 to 30</asp:ListItem>
-                            <asp:ListItem Value="value" Selected="false">30 to 40</asp:ListItem>
-                            <asp:ListItem Value="value" Selected="false">over 50</asp:ListItem>
+                            <asp:ListItem Value="value" Selected="true">10 to 20</asp:ListItem>
+                            <asp:ListItem Value="value">20 to 30</asp:ListItem>
+                            <asp:ListItem Value="value">30 to 40</asp:ListItem>
+                            <asp:ListItem Value="value">over 50</asp:ListItem>
                         </asp:DropDownList>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ValidationGroup="Curriculum" ErrorMessage="Choose your age" ControlToValidate="DropDownList2" BackColor="#FF5050" InitialValue="Select..."></asp:RequiredFieldValidator>
                     </asp:TableCell>
@@ -121,7 +120,7 @@
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>
-                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click1" /> <%--PostBackUrl="~/Thankyou.aspx"--%>
+                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click1" />
                     </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>

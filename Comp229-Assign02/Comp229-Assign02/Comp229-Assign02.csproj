@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{394AC00B-A29D-47B1-92B5-6A475C46FEDC}</ProjectGuid>
+    <ProjectGuid>{7A0650B7-F48B-4E8A-AE81-9EE20301F032}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -126,18 +126,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicon.png" />
     <Content Include="img\bg1.jpg" />
     <Content Include="img\home_logo.png" />
     <Content Include="img\logo1.png" />
     <Content Include="img\sole_logo.jpg" />
-    <Content Include="Thankyou.aspx" />
     <Content Include="Survey.aspx" />
+    <Content Include="Thankyou.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
-    <Content Include="favicon-def.ico" />
+    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -183,20 +182,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Thankyou.aspx.cs">
-      <DependentUpon>Thankyou.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Thankyou.aspx.designer.cs">
-      <DependentUpon>Thankyou.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Survey.aspx.cs">
       <DependentUpon>Survey.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Survey.aspx.designer.cs">
       <DependentUpon>Survey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Thankyou.aspx.cs">
+      <DependentUpon>Thankyou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Thankyou.aspx.designer.cs">
+      <DependentUpon>Thankyou.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -257,9 +256,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49923</DevelopmentServerPort>
+          <DevelopmentServerPort>51064</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49923/</IISUrl>
+          <IISUrl>http://localhost:51064/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

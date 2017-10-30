@@ -2,6 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+
     <div class="def_bg">
         <div class="jumbotron">
             <br />
@@ -15,7 +16,8 @@
                 <br />
                 We will inform winner after Oct 30th<br />
             </p>
-            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Survey.aspx" CssClass="btn btn-default">Take a Survey</asp:LinkButton>
+
+              <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-default" OnClick="LinkButton1_Click">Take a Survey</asp:LinkButton>
 
 
             <div class="jumbo_footer">
@@ -28,7 +30,6 @@
             </div>
         </div>
     </div>
-
 
     <%--References :
         background image: https://www.google.ca/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwj_hrrczdvWAhWCy4MKHR1nDZwQjRwIBw&url=http%3A%2F%2Fwww.wallpapersin4k.org%2Fimages%2F958659&psig=AOvVaw31aaU-f5REO7Bwiu3_6Q8g&ust=1507365887510068
