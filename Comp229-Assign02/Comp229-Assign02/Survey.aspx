@@ -5,7 +5,23 @@
     <div class="survey">
         <div class="form-group">
             <h1><%: Title %></h1>
-
+            <script>
+                function CheckValue(sender, args) {
+                    var chkControlld = 'CheckBoxList1';
+                    var options = document.getElementById(chkControlld).getElementsByTagName('input');
+                    var ischecked = false;
+                    args.IsValid = false;
+                    for (i = 0; i < options.length; i++) {
+                        var opt = options[i];
+                        if (opt.type == "checkbox") {
+                            if (opt.checked) {
+                                ischecked = true;
+                                args.IsValid = true;
+                            }
+                        }
+                    }
+                }
+            </script>
             <asp:Table class="form_group" runat="server" Width="100%">
                 <asp:TableRow>
                     <asp:TableCell>
@@ -14,9 +30,9 @@
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>
-                        <asp:TextBox ID="TextBox1" runat="server" placeholder="example@gmail.com" ></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter proper data" ControlToValidate="TextBox1" BackColor="#FF5050"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="This is not a email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="TextBox1" BackColor="#FF5050"></asp:RegularExpressionValidator>
+                        <asp:TextBox ID="TextBox1" runat="server" placeholder="example@gmail.com" ></asp:TextBox>&nbsp; 
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter proper email address" ControlToValidate="TextBox1" BackColor="#FF5050" Display="Dynamic"></asp:RequiredFieldValidator>&nbsp;
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="This is not a email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="TextBox1" BackColor="#FF5050" Display="Dynamic"></asp:RegularExpressionValidator>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
@@ -26,11 +42,11 @@
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>
-                        <asp:TextBox ID="TextBox2" runat="server" placeholder="50"></asp:TextBox>
+                        <asp:TextBox ID="TextBox2" runat="server" placeholder="50"></asp:TextBox>&nbsp;(20 ~ 150)&nbsp; 
 
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter proper data" ControlToValidate="TextBox1" BackColor="#FF5050"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter proper budget" ControlToValidate="TextBox2" BackColor="#FF5050" Display="Dynamic"></asp:RequiredFieldValidator>&nbsp;
 
-                        <asp:RangeValidator ID="RangeValidator1" runat="server" ForeColor="White" ErrorMessage="Out of Range" ControlToValidate="TextBox2" MinimumValue="20" MaximumValue="70" BackColor="#FF5050"></asp:RangeValidator>
+                        <asp:RangeValidator ID="RangeValidator1" runat="server" ForeColor="White" ErrorMessage="Out of Range" ControlToValidate="TextBox2" MinimumValue="20" MaximumValue="150" Type="Integer" Display="Dynamic" SetFocusOnError="true" BackColor="#FF5050"></asp:RangeValidator>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
@@ -56,7 +72,8 @@
                     <asp:TableCell>
 
                         <asp:DropDownList ID="DropDownList2" runat="server" ValidationGroup="Curriculum">
-                            <asp:ListItem  Selected="true">10 to 20</asp:ListItem>
+                        
+                            <asp:ListItem >10 to 20</asp:ListItem>
                             <asp:ListItem >20 to 30</asp:ListItem>
                             <asp:ListItem >30 to 40</asp:ListItem>
                             <asp:ListItem >over 50</asp:ListItem>
@@ -72,8 +89,8 @@
                 <asp:TableRow>
                     <asp:TableCell>
                         <asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatDirection="Horizontal">
-                            <asp:ListItem Text="First Visit" Selected="true" />
-                            <asp:ListItem Text="Once or Twice" Selected="true" />
+                            <asp:ListItem Text="First Visit" Selected="true" /> 
+                            <asp:ListItem Text="Once or Twice" Selected="false" />
                             <asp:ListItem Text="More Than Four Times" Selected="false" />
                         </asp:RadioButtonList>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Choose your visit time" ControlToValidate="DropDownList2" BackColor="#FF5050"></asp:RequiredFieldValidator>
@@ -87,10 +104,13 @@
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>
-                        <asp:CheckBox ID="CheckBox1" runat="server" Text="Pasta" />
-                        <asp:CheckBox ID="CheckBox2" runat="server" Text="Pizza"/>
-                        <asp:CheckBox ID="CheckBox3" runat="server" Text="Main Dish"/>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Choose your dish" ControlToValidate="DropDownList2" BackColor="#FF5050"></asp:RequiredFieldValidator>
+                        <asp:CheckBoxList ID="CheckBoxList1" runat="server" ValidationGroup="MyForm">
+                            <asp:ListItem Value ="1">Pasta</asp:ListItem>
+                            <asp:ListItem Value ="2">Pizza</asp:ListItem>
+                            <asp:ListItem Value ="3">Main Dish</asp:ListItem>
+                        </asp:CheckBoxList>
+                        
+                        <asp:CustomValidator ID="CustomValidator1" OnServerValidate="CheckBox" runat="server" BackColor="#FF5050" ErrorMessage="Please check one of boxes at least" EnableClientScript="true" ClientValidationFunction="CheckValue" ValidationGroup="MyForm" Display="Dynamic"></asp:CustomValidator>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
@@ -121,13 +141,14 @@
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>
-                        <br />
+                       
                         <br />
                         <asp:Button ID="Button1" CssClass="btn-warning" runat="server" Text="Button" OnClick="Button1_Click1" />
                     </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
         </div>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="true" DisplayMode="BulletList" HeaderText="Please see following error:" ShowSummary="False" />
     </div>
     <%--    <div class="home_logo">
             <p><asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/img/home_logo.png" Width="100px" PostBackUrl="~/Default.aspx" /></p>

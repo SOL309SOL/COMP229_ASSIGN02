@@ -175,40 +175,22 @@ namespace Comp229_Assign02 {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// CheckBox1 컨트롤입니다.
+        /// CheckBoxList1 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
         
         /// <summary>
-        /// CheckBox2 컨트롤입니다.
+        /// CustomValidator1 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
-        
-        /// <summary>
-        /// CheckBox3 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox3;
-        
-        /// <summary>
-        /// RequiredFieldValidator4 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
         
         /// <summary>
         /// Label10 컨트롤입니다.
@@ -254,5 +236,14 @@ namespace Comp229_Assign02 {
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// ValidationSummary1 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
     }
 }

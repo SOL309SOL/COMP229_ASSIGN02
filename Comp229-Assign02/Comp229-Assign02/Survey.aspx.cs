@@ -20,26 +20,26 @@ namespace Comp229_Assign02
             Session["Satisfaction"] = "";
             Session["Gender"] = "";
         }
+        protected void CheckBox (object sender, ServerValidateEventArgs e)
+        {
+            e.IsValid = CheckBoxList1.Items[1].Selected;
+        }
         protected void Button1_Click1(object sender, EventArgs e)
         {
+            
             Session["Name"] = TextBox1.Text;
             Session["Price"] = TextBox2.Text;
             Session["Suggestion"] = TextBox3.Text;
-            
-            if (this.CheckBox1.Checked)
-            {
-                Session["Food"] += CheckBox1.Text + ',';
-            }
-            if(this.CheckBox2.Checked)
-            {
-                Session["Food"] += CheckBox2.Text + ',';
-            }
-            if (this.CheckBox3.Checked)
-            {
-                Session["Food"] += CheckBox3.Text + ',';
-            }
+           
+                for (int i = 0; i < CheckBoxList1.Items.Count; i++)
+                {
+                    if (CheckBoxList1.Items[i].Selected)
+                    {
+                        Session["Food"] += CheckBoxList1.Items[i].Text + ',';
+                    }
+                }
 
-            for(int i =0; i< DropDownList2.Items.Count; i++)
+            for (int i =0; i< DropDownList2.Items.Count; i++)
             {
                 if (DropDownList2.Items[i].Selected)
                 {
